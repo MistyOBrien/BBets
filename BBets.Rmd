@@ -73,7 +73,7 @@ The average amount that Brownlow would make is $18. The standard deviation is 50
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
 ```{r}
-classSize=29
+classSize=28
 winAmount=1
 loseAmount=2
 bank=0
