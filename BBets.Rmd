@@ -114,3 +114,4 @@ The lower confidence intervals that Brownlow would win would approx. 73, ucl is 
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+In order to make his profits center on zero, the odds needs to be $4.25 to $1. If the odds stays at 2:1 with a class of 28 would make the payoff approximately fair. The 95% confidence interval for Brownlows return is 'r lcl', to 'r ucl'
