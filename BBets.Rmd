@@ -61,19 +61,54 @@ saveBank[j]=bank
 hist(saveBank)
 ```
 
+
+The amount of money that Brownlow should pay out for the loss is $4.25 to make this a better and a bit more fair game
+
 ```{r}
 favstats(saveBank)
 ```
-The mean is 18.19. The standard deviation is 50.27. The minimum loss is 128.5 and the max profit is 169.75
+The average amount that Brownlow would make is $18. The standard deviation is 50.27. The minimum loss is $128 and the max profit is $ 169
 
 # What size of class makes the 2:1 bet fair?  
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
+
+```{r}
+classSize=29
+winAmount=1
+loseAmount=2
+bank=0
+test = vector('numeric')
+saveBank= vector('numeric')
+for(j in 1:30){
+  bank=0
+for(i in 1:637){
+test= sample(URN,size= classSize, replace=TRUE)
+ifelse(length(unique(test))==classSize, 
+(bank=bank-loseAmount), (bank=bank+winAmount))
+saveBank[j]=bank
+}
+}
+hist(saveBank)
+```
+
+
+```{r}
+favstats(saveBank)
+```
+The average amount of students that make this game fair is around 28 to 30.
 
 
 # In the class and payoff as described what is a 95% confidence interval for Brownlow's earnings?
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
+```{r}
+sortedBank = sort(saveBank)
+lcl = sortedBank[25]
+ucl=sortedBank[975]
+print(paste(lcl,ucl))
+```
+The lower confidence intervals that Brownlow would win would approx. 73, ucl is NA 
 
 # Discussion and Conclusion
 
